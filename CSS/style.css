@@ -203,14 +203,22 @@ h3 {
 }
 
 .formulario {
-
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
 }
 .formulario__campo {
  /* border-width: 1rem;
     border-style: solid; 
     border-color: var(--primarioOscuro); */
-
+    
     border: 1rem solid var(--primarioOscuro); /* Esto significa es lo mismo que lo comentado arriba */
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: var(--fuenteSecundaria);
+    padding: 1rem;
+    appearance: none;
 }
 .formulario__submit {
     background-color: var(--secundario);
@@ -219,6 +227,7 @@ h3 {
     font-family: var(--fuentePrincipal);
     padding: 2rem;
     transition: background-color .3s ease;
+    grid-column: 1/3;
 }
 .formulario__submit:hover {
     cursor: pointer;
